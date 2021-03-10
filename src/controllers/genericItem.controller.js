@@ -22,7 +22,7 @@ const getGenericItem = async (req, res, next) => {
     if (!genericItem) {
       throw clientErrors.NotFound('genericItem not found');
     }
-    return res.json();
+    return res.json(genericItem);
   } catch (err) {
     return next(err);
   }
