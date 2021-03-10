@@ -3,22 +3,17 @@ const GenericItem = require('../models/genericItem.model');
 /**
  * Create a genericItem
  * @params {Object} genericItemBody
- * @returns {Promise<GenericItem>}
+ * @returns {Promise<GenericItem>} GenericItem object
  */
-const createGenericItem = async (genericItemBody) => {
-  const genericItem = await GenericItem.create(genericItemBody);
-  return genericItem;
-};
+const createGenericItem = async (genericItemBody) =>
+  GenericItem.create(genericItemBody);
 
 /**
  * Get genericItem by ID
  * @params {ObjectId} id
- * @returns {Promise<GenericItem>}
+ * @returns {Promise<GenericItem>} GenericItem object
  */
-const getGenericItemById = async (id) => {
-  const genericItem = await GenericItem.findById(id);
-  return genericItem;
-};
+const getGenericItemById = async (id) => GenericItem.findById(id);
 
 module.exports = {
   createGenericItem,
